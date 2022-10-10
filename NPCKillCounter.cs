@@ -11,7 +11,6 @@ public class NPCKillCounter : Mod
     {
         return (string)args[0] switch // 注意调用的是那个客户端还是服务端
         {
-            "PlayerCount" => NPCKillCounterPlayer.Count,
             "SystemCount" => NPCKillCounterSystem.Count,
             _ => throw new ArgumentException("Call Parameter error")
         };
